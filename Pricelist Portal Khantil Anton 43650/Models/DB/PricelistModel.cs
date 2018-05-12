@@ -16,7 +16,7 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Models.DB
         public virtual DbSet<Headphone> Headphones { get; set; }
         public virtual DbSet<TV> TVs { get; set; }
 
-        public static void ClearTables(string tableName)
+        public static void ClearTable(string tableName)
         {
             using (PricelistModel db = new PricelistModel())
                 db.Database.ExecuteSqlCommand($"TRUNCATE TABLE [{tableName}]");

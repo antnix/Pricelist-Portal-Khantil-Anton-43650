@@ -13,6 +13,13 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Parser.Morele
 
         public string Model { get; set; }
 
+        public MoreleSettings(string baseUrl)
+        {
+            BaseUrl = baseUrl;
+            StartPoint = 1;
+            EndPoint = 1;
+        }
+
         public MoreleSettings(string baseUrl, int start, int end, string model) 
         {
             BaseUrl = baseUrl;
@@ -20,6 +27,7 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Parser.Morele
             EndPoint = end;
             Model = model;
         }
+
         public MoreleSettings(string baseUrl, string prefix, int start, int end, string model) 
         {
             BaseUrl = baseUrl;

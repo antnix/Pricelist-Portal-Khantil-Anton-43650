@@ -12,14 +12,15 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Parser.Morele
         {
             var moreleParser = new MoreleParser();
             var parser = new ParserWorker<List<object>>(moreleParser);
+            List<object> results;
             parser.Settings = new MoreleSettings("https://www.morele.net/rtv/telewizory/telewizory-412/,,,,,,,,0,,,,", 1, 11, "TV");
-            var result = parser.Start();
+            results = parser.Start();
             SaveNewData(result);
             //parser.OnNewData += Parser_OnNewData;
 
             parser.Settings = new MoreleSettings("https://www.morele.net/rtv/sluchawki/sluchawki-bezprzewodowe-458/,,,,,,,,0,,,,", 1, 24, "Headphone");
-            result = parser.Start();
-            SaveNewData(result);
+            results = parser.Start();
+            SaveNewData(results);
             //parser.OnNewData += Parser_OnNewData;
         }
 
@@ -27,8 +28,8 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Parser.Morele
         {
             using (PricelistModel db = new PricelistModel())
             {
-                PricelistModel.ClearTables("TV");
-                PricelistModel.ClearTables("Headphones");
+                PricelistModel.ClearTable("TVs");
+                PricelistModel.ClearTable("Headphones");
                 foreach (var item in goodsList)
                 {
                     switch (item.GetType().ToString())

@@ -69,7 +69,7 @@
             @Html.LabelFor(model => model.SmartTV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.SmartTV)
+                    @Html.EditorFor(model => model.SmartTV, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.SmartTV, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -79,7 +79,7 @@
             @Html.LabelFor(model => model.WiFi, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.WiFi)
+                    @Html.EditorFor(model => model.WiFi, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.WiFi, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -95,7 +95,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-danger" />
             </div>
         </div>
     </div>

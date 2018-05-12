@@ -28,19 +28,19 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Models.DB
         [Display(Name = "Amount")]
         public int Amount { get; set; }
 
-        [StringLength(5)]
+        [StringLength(50)]
         [Display(Name = "Energy class")]
         public string EnergyClass { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "Screen diagonal")]
         public string ScreenDiagonal { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "SmartTV")]
         public string SmartTV { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "WiFi")]
         public string WiFi { get; set; }
 

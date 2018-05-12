@@ -27,19 +27,19 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Models.DB
         [Display(Name = "Amount")]
         public int Amount { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "Max working time")]
         public string MaxWorkingTime { get; set; }
 
-        [StringLength(20)]
+        [StringLength(50)]
         [Display(Name = "Transmission type")]
         public string TransmissionType { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "Microphone")]
         public string HaveMicrophone { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         [Display(Name = "Range")]
         public string Range { get; set; }
 

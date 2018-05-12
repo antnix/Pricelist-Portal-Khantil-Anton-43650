@@ -51,5 +51,22 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Parser
             return null;
         }
 
+        public string GetSourceByPageURL(string URL)
+        {
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(URL);
+            using (HttpWebResponse response = (HttpWebResponse)httpWebRequest.GetResponse())
+            {
+                if (response != null && response.StatusCode == HttpStatusCode.OK)
+                {
+                    var encoding = Encoding.GetEncoding(response.CharacterSet);
+
+                    using (var responseStream = response.GetResponseStream())
+                    using (var reader = new StreamReader(responseStream, encoding))
+                        return reader.ReadToEnd();
+                }
+            }
+            return null;
+        }
+
     }
 }

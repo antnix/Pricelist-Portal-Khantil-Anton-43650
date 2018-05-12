@@ -164,6 +164,14 @@
     <Compile Include="Migrations\201805061802461_BoolToString.Designer.cs">
       <DependentUpon>201805061802461_BoolToString.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805121252215_ColumnsDataLengthChanged.cs" />
+    <Compile Include="Migrations\201805121252215_ColumnsDataLengthChanged.Designer.cs">
+      <DependentUpon>201805121252215_ColumnsDataLengthChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121332095_HeadphoneClumnLengthChanged.cs" />
+    <Compile Include="Migrations\201805121332095_HeadphoneClumnLengthChanged.Designer.cs">
+      <DependentUpon>201805121332095_HeadphoneClumnLengthChanged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB\Headphone.cs" />
     <Compile Include="Models\DB\PricelistModel.cs" />
@@ -232,6 +240,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805061802461_BoolToString.resx">
       <DependentUpon>201805061802461_BoolToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121252215_ColumnsDataLengthChanged.resx">
+      <DependentUpon>201805121252215_ColumnsDataLengthChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121332095_HeadphoneClumnLengthChanged.resx">
+      <DependentUpon>201805121332095_HeadphoneClumnLengthChanged.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
