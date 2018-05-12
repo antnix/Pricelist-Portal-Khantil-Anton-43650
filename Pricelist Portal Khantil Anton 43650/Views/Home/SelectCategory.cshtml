@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Select Category";
+}
+
+<h2>Select Category</h2>
+<hr />
+    @if (ViewBag.Message != null)
+    {
+        @Html.Label((string)ViewBag.Message, new { @class = "label label-success;" });
+    }
+
+
+    @foreach (string modelName in ViewBag.Models)
+    {
+    <h4> @Html.ActionLink(modelName + " category", "Index", modelName) </h4>
+       
+    }
+

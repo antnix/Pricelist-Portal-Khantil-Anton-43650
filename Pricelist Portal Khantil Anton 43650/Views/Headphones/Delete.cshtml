@@ -1,0 +1,96 @@
+﻿@model Pricelist_Portal_Khantil_Anton_43650.Models.DB.Headphone
+
+@{
+    ViewBag.Title = "Headphones Pricelist";
+}
+
+<h2>Delete Headphone</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Headphone</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxWorkingTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxWorkingTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransmissionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransmissionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveMicrophone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveMicrophone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

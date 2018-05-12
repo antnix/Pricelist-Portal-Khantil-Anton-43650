@@ -1,0 +1,90 @@
+﻿@model Pricelist_Portal_Khantil_Anton_43650.Models.DB.Headphone
+
+@{
+    ViewBag.Title = "Headphones Pricelist";
+}
+
+<h2>Headphone Details</h2>
+
+<div>
+    <h4>Headphone</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxWorkingTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxWorkingTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransmissionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransmissionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveMicrophone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveMicrophone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

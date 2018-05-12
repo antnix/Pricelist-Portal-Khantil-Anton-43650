@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Pricelist_Portal_Khantil_Anton_43650.Models.DB.TV>
+
+@{
+    ViewBag.Title = "TVs Pricelist";
+}
+
+<h2>TVs Pricelist</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnergyClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScreenDiagonal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SmartTV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WiFi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Brand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnergyClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScreenDiagonal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SmartTV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WiFi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TV_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TV_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TV_ID })
+        </td>
+    </tr>
+}
+
+</table>

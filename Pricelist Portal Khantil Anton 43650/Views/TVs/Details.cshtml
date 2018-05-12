@@ -1,0 +1,90 @@
+﻿@model Pricelist_Portal_Khantil_Anton_43650.Models.DB.TV
+
+@{
+    ViewBag.Title = "TVs Pricelist";
+}
+
+<h2>TV Details</h2>
+
+<div>
+    <h4>TV</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnergyClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnergyClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ScreenDiagonal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ScreenDiagonal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SmartTV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SmartTV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WiFi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WiFi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TV_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
