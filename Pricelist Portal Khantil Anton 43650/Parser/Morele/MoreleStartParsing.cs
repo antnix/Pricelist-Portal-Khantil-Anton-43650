@@ -12,14 +12,13 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Parser.Morele
         {
             var moreleParser = new MoreleParser();
             var parser = new ParserWorker<List<object>>(moreleParser);
-            List<object> results;
+            List<object> results = new List<object>();
             parser.Settings = new MoreleSettings("https://www.morele.net/rtv/telewizory/telewizory-412/,,,,,,,,0,,,,", 1, 11, "TV");
-            results = parser.Start();
-            SaveNewData(result);
+            results.AddRange(parser.Start());
             //parser.OnNewData += Parser_OnNewData;
 
             parser.Settings = new MoreleSettings("https://www.morele.net/rtv/sluchawki/sluchawki-bezprzewodowe-458/,,,,,,,,0,,,,", 1, 24, "Headphone");
-            results = parser.Start();
+            results.AddRange(parser.Start());
             SaveNewData(results);
             //parser.OnNewData += Parser_OnNewData;
         }
