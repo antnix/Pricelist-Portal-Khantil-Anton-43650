@@ -13,42 +13,56 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Models.DB
         [Display(Name = "TV ID")]
         public int TV_ID { get; set; }
 
-        [Required]
         [StringLength(60)]
         [Display(Name = "Brand")]
+        [Required(ErrorMessage = "Brand name is required")]
         public string Brand { get; set; }
 
         [StringLength(60)]
         [Display(Name = "Product code")]
+        [Required(ErrorMessage = "Product code is required")]
         public string ProductCode { get; set; }
 
         [Display(Name = "Price")]
+        [Required(ErrorMessage = "Price is required")]
         public decimal Price { get; set; }
 
         [Display(Name = "Amount")]
+        [Required(ErrorMessage = "Amount is required")]
         public int Amount { get; set; }
 
         [StringLength(50)]
         [Display(Name = "Energy class")]
-        public string EnergyClass { get; set; }
+        public string EnergyClass { get; set; } = "Brak danych";
 
         [StringLength(50)]
         [Display(Name = "Screen diagonal")]
-        public string ScreenDiagonal { get; set; }
+        public string ScreenDiagonal { get; set; } = "Brak danych";
 
         [StringLength(50)]
         [Display(Name = "SmartTV")]
-        public string SmartTV { get; set; }
+        public string SmartTV { get; set; } = "Brak danych";
 
         [StringLength(50)]
         [Display(Name = "WiFi")]
-        public string WiFi { get; set; }
+        public string WiFi { get; set; } = "Brak danych";
 
         [StringLength(1024)]
         [Display(Name = "Details")]
-        public string Details { get; set; }
+        public string Details { get; set; } = "Brak danych";
 
-        public TV() { }
+        public TV()
+        {
+            Brand = null;
+            ProductCode = null;
+            Price = 0;
+            Amount = 0;
+            EnergyClass = null;
+            ScreenDiagonal = null;
+            SmartTV = null;
+            WiFi = null;
+            Details = null;
+        }
 
         public TV(string brand,
             string productCode,

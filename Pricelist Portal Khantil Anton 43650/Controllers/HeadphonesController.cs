@@ -53,7 +53,9 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Controllers
             {
                 db.Headphones.Add(headphone);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                TempData["msg"] = "<script>alert('Product added successfully!');</script>";
+                ModelState.Clear();
+                return RedirectToAction("Create");
             }
 
             return View(headphone);
