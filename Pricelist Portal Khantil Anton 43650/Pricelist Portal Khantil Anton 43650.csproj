@@ -157,6 +157,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HeadphonesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ParserController.cs" />
     <Compile Include="Controllers\TVsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,8 +179,29 @@
     <Compile Include="Migrations\201805201040146_RequiredErrorMessage.Designer.cs">
       <DependentUpon>201805201040146_RequiredErrorMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805201235521_OrderTableAdd.cs" />
+    <Compile Include="Migrations\201805201235521_OrderTableAdd.Designer.cs">
+      <DependentUpon>201805201235521_OrderTableAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241952230_TestMigration.cs" />
+    <Compile Include="Migrations\201805241952230_TestMigration.Designer.cs">
+      <DependentUpon>201805241952230_TestMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241955532_TestMigration2.cs" />
+    <Compile Include="Migrations\201805241955532_TestMigration2.Designer.cs">
+      <DependentUpon>201805241955532_TestMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805241958324_TestMigration3.cs" />
+    <Compile Include="Migrations\201805241958324_TestMigration3.Designer.cs">
+      <DependentUpon>201805241958324_TestMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805242023162_TestMigration4.cs" />
+    <Compile Include="Migrations\201805242023162_TestMigration4.Designer.cs">
+      <DependentUpon>201805242023162_TestMigration4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DB\Headphone.cs" />
+    <Compile Include="Models\DB\Order.cs" />
     <Compile Include="Models\DB\PricelistModel.cs" />
     <Compile Include="Models\DB\TV.cs" />
     <Compile Include="Parser\HtmlLoader.cs" />
@@ -249,6 +271,11 @@
     <Content Include="Views\Headphones\Index.cshtml" />
     <Content Include="Views\TVs\Details.cshtml" />
     <Content Include="Views\TVs\Create.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805061802461_BoolToString.resx">
@@ -262,6 +289,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805201040146_RequiredErrorMessage.resx">
       <DependentUpon>201805201040146_RequiredErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805201235521_OrderTableAdd.resx">
+      <DependentUpon>201805201235521_OrderTableAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241952230_TestMigration.resx">
+      <DependentUpon>201805241952230_TestMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241955532_TestMigration2.resx">
+      <DependentUpon>201805241955532_TestMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241958324_TestMigration3.resx">
+      <DependentUpon>201805241958324_TestMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805242023162_TestMigration4.resx">
+      <DependentUpon>201805242023162_TestMigration4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -22,9 +22,11 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Models.DB
         public string ProductCode { get; set; }
 
         [Display(Name = "Price")]
+        [Range(0, 10000000, ErrorMessage = "Price must be between 0 and 10000000")]
         public decimal Price { get; set; }
 
         [Display(Name = "Amount")]
+        [Range(0, 1000, ErrorMessage = "Amount must be between 0 and 1000")]
         public int Amount { get; set; }
 
         [StringLength(50)]

@@ -4,78 +4,92 @@
     ViewBag.Title = "TVs Pricelist";
 }
 
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <h2>TVs Pricelist</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Brand)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductCode)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Amount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EnergyClass)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ScreenDiagonal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SmartTV)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WiFi)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Details)
-        </th>
-        <th></th>
-    </tr>
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnergyClass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ScreenDiagonal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SmartTV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WiFi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Details)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Brand)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductCode)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Amount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EnergyClass)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ScreenDiagonal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SmartTV)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WiFi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Details)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TV_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TV_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TV_ID })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnergyClass)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ScreenDiagonal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SmartTV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WiFi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Details)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.TV_ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.TV_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.TV_ID })
+                </td>
+            </tr>
+        }
 
+    </tbody>
 </table>
+<script>
+    $(document).ready(function () {
+        $.noConflict();
+        $('#example').DataTable();
+    });
+</script>

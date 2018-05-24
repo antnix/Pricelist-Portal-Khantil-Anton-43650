@@ -13,6 +13,7 @@ namespace Pricelist_Portal_Khantil_Anton_43650.Models.DB
         {
         }
 
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Headphone> Headphones { get; set; }
         public virtual DbSet<TV> TVs { get; set; }
 
